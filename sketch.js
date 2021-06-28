@@ -30,7 +30,7 @@ if (backgroundImg){
     // write code to display time in correct format here
     fill("white");
     textSize (30);
-    text ("Time:  " + hour + ":00", 100,50);
+    text ("Time:  " + hour, 100,50);
 }
 }
 
@@ -43,7 +43,7 @@ var response = await fetch("http://worldtimeapi.org/api/timezone/Australia/Brisb
 var responseJson = await response.json();
     var dateTime = responseJson.datetime;
     // write code slice the datetime
-    hour = dateTime.slice(11,13);
+    hour = dateTime.slice(11,16);
     console.log(hour);
     // add conditions to change the background images from sunrise to sunset
     if (hour>"24" && hour<"02"){
